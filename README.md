@@ -1,43 +1,42 @@
 # Leaflet Custom Headers
 
-Leaflet Custom Headers è un'estensione di `L.TileLayer` che permette di aggiungere **header personalizzati** alle richieste HTTP quando si caricano le tile.
+Leaflet Custom Headers is an extension to `L.TileLayer` that allows you to add **custom headers** to HTTP requests when loading tiles.
 
-## 🚀 Installazione
+## 🚀 Installation.
 
-Per installare il pacchetto, eseguire:
+To install the package, run:
 
 ```sh
 npm install leaflet-custom-headers
 ```
 
-## 📖 Utilizzo
+## 📖 Usage
 
-Esempio di utilizzo con Leaflet:
+Example of use with Leaflet:
 
 ```ts
-import L from "leaflet";
-import TileLayerHeaders from "leaflet-custom-headers";
+import L from “leaflet”;
+import TileLayerHeaders from “leaflet-custom-headers”;
 
-const map = L.map("map").setView([51.505, -0.09], 13);
+const map = L.map(“map”).setView([51.505, -0.09], 13);
 
-const layerWithHeaders = new TileLayerHeaders("https://example.com/tiles/{z}/{x}/{y}.png", {
+const layerWithHeaders = new TileLayerHeaders(“https://example.com/tiles/{z}/{x}/{y}.png”, {
   customHeaders: {
-    "Authorization": "Bearer YOUR_ACCESS_TOKEN"
+    “Authorization": ”Bearer YOUR_ACCESS_TOKEN”
   }
 });
 
 layerWithHeaders.addTo(map);
 ```
 
-## ⚙ Opzioni disponibili
+## ⚙ Available options.
 
-- `customHeaders` *(opzionale)*: Oggetto contenente gli header personalizzati da inviare nelle richieste HTTP.
+- `customHeaders` *(optional)*: Object containing the custom headers to be sent in HTTP requests.
 
-## 📜 Licenza
+## 📜 License
 
-Distribuito sotto licenza **MIT**.
+Distributed under **MIT** license.
 
 ---
 
-🌍 **Contribuisci!** Se hai suggerimenti o vuoi migliorare il plugin, sentiti libero di aprire una **Issue** o una **Pull Request** nel repository GitHub!
-
+🌍 **Contribute!** If you have suggestions or want to improve the plugin, feel free to open an **Issue** or a **Pull Request** in the GitHub repository!
