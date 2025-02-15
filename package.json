@@ -1,0 +1,29 @@
+{
+  "name": "leaflet-custom-headers",
+  "version": "1.0.0",
+  "description": "A plugin for Leaflet that adds support for custom headers to retrieve tiles from the server",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fifogipo/leaflet-custom-headers.git"
+  },
+  "keywords": [
+    "leaflet",
+    "map",
+    "plugin"
+  ],
+  "author": "Federico Gasperoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fifogipo/leaflet-custom-headers/issues"
+  },
+  "homepage": "https://github.com/fifogipo/leaflet-custom-headers#readme",
+  "peerDependencies": {
+    "leaflet": "^1.9.4",
+    "typescript": "^4.8.2",
+    "@types/leaflet": "^1.9.14"
+  }
+}
