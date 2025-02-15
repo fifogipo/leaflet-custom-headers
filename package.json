@@ -4,7 +4,8 @@
   "description": "A plugin for Leaflet that adds support for custom headers to retrieve tiles from the server",
   "main": "main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
