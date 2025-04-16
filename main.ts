@@ -18,7 +18,7 @@ export class TileLayerHeaders extends L.TileLayer {
   /**
    * Extended options including custom headers.
    */
-  override options!: TileLayerHeadersOptions;
+  declare options: TileLayerHeadersOptions;
 
   /**
    * Creates an instance of TileLayerHeaders.
