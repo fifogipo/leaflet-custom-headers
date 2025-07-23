@@ -1,6 +1,6 @@
 {
   "name": "leaflet-custom-headers",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A plugin for Leaflet that adds support for custom headers to retrieve tiles from the server",
   "main": "main.ts",
   "scripts": {
