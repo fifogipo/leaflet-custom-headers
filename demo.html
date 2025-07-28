@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Leaflet-Testmap</title>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./dist/main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body,
+      #map_div {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map_div"></div>
+    <script>
+      var map = L.map("map_div", {
+        center: [48, 14],
+        zoom: 10,
+        minZoom: 8,
+        maxZoom: 19,
+        maxBounds: [
+          [47, 12],
+          [49, 16],
+        ],
+      });
+      const layerWithHeaders = new L.TileLayerHeaders(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { customHeaders: { "User-Agent": "My personal Browser" } }
+      );
+      layerWithHeaders.addTo(map);
+    </script>
+  </body>
+</html>
