@@ -14,7 +14,7 @@ export interface TileLayerHeadersOptions extends L.TileLayerOptions {
 /**
  * TileLayerHeaders extends Leaflet's TileLayer to allow custom headers in tile requests.
  */
-export class TileLayerHeaders extends L.TileLayer {
+export default class TileLayerHeaders extends L.TileLayer {
   /**
    * Extended options including custom headers.
    */
