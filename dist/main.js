@@ -2,31 +2,12 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('leaflet')) :
     typeof define === 'function' && define.amd ? define(['leaflet'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, (global.L = global.L || {}, global.L.TileLayerHeaders = factory(global.L)));
-})(this, (function (L) { 'use strict';
-
-    function _interopNamespaceDefault(e) {
-        var n = Object.create(null);
-        if (e) {
-            Object.keys(e).forEach(function (k) {
-                if (k !== 'default') {
-                    var d = Object.getOwnPropertyDescriptor(e, k);
-                    Object.defineProperty(n, k, d.get ? d : {
-                        enumerable: true,
-                        get: function () { return e[k]; }
-                    });
-                }
-            });
-        }
-        n.default = e;
-        return Object.freeze(n);
-    }
-
-    var L__namespace = /*#__PURE__*/_interopNamespaceDefault(L);
+})(this, (function (leaflet) { 'use strict';
 
     /**
      * TileLayerHeaders extends Leaflet's TileLayer to allow custom headers in tile requests.
      */
-    class TileLayerHeaders extends L__namespace.TileLayer {
+    class TileLayerHeaders extends leaflet.TileLayer {
         /**
          * Creates an instance of TileLayerHeaders.
          * @param urlTemplate - The URL template for fetching tiles.
@@ -43,8 +24,8 @@
          */
         createTile(coords, done) {
             const tile = document.createElement('img');
-            L.DomEvent.on(tile, 'load', this._tileOnLoad.bind(this, done, tile));
-            L.DomEvent.on(tile, 'error', this._tileOnError.bind(this, done, tile, new Error()));
+            leaflet.DomEvent.on(tile, 'load', this._tileOnLoad.bind(this, done, tile));
+            leaflet.DomEvent.on(tile, 'error', this._tileOnError.bind(this, done, tile, new Error()));
             if (this.options.crossOrigin || this.options.crossOrigin === '') {
                 tile.crossOrigin = this.options.crossOrigin === true ? '' : this.options.crossOrigin;
             }

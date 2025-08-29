@@ -1,10 +1,9 @@
-import * as L from "leaflet";
-import {DomEvent, DoneCallback} from "leaflet";
+import {DomEvent, DoneCallback, TileLayerOptions, TileLayer, Coords} from "leaflet";
 
 /**
  * Interface extending TileLayerOptions to include custom headers.
  */
-export interface TileLayerHeadersOptions extends L.TileLayerOptions {
+export interface TileLayerHeadersOptions extends TileLayerOptions {
   /**
    * Custom headers to be sent with tile requests.
    */
@@ -14,7 +13,7 @@ export interface TileLayerHeadersOptions extends L.TileLayerOptions {
 /**
  * TileLayerHeaders extends Leaflet's TileLayer to allow custom headers in tile requests.
  */
-export default class TileLayerHeaders extends L.TileLayer {
+export default class TileLayerHeaders extends TileLayer {
   /**
    * Extended options including custom headers.
    */
@@ -35,7 +34,7 @@ export default class TileLayerHeaders extends L.TileLayer {
    * @param done - Callback function to signal completion.
    * @returns The created HTMLImageElement.
    */
-  override createTile(coords: L.Coords, done: DoneCallback): HTMLImageElement {
+  override createTile(coords: Coords, done: DoneCallback): HTMLImageElement {
     const tile = document.createElement('img');
 
     DomEvent.on(tile, 'load', this._tileOnLoad.bind(this, done, tile));

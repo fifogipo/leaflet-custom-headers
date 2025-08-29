@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/fifogipo/leaflet-custom-headers#readme",
   "peerDependencies": {
-    "@types/leaflet": "^1.9.14",
-    "leaflet": "^1.9.4",
-    "typescript": "^4.8.2"
+    "@types/leaflet": "^1.9.20",
+    "leaflet": "^2.0.0-alpha.1",
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.4",
-    "rollup": "^4.46.1",
+    "rollup": "^4.49.0",
     "tslib": "^2.8.1"
   }
 }
