@@ -1,6 +1,6 @@
 # Leaflet Custom Headers
 
-Leaflet Custom Headers is an extension to `L.TileLayer` that allows you to add **custom headers** to HTTP requests when loading tiles.
+Leaflet Custom Headers is an extension to `TileLayer` that allows you to add **custom headers** to HTTP requests when loading tiles.
 
 ## 🚀 Installation.
 
@@ -15,10 +15,10 @@ npm install leaflet-custom-headers
 Example of use with Leaflet:
 
 ```ts
-import L from “leaflet”;
+import {Map} from “leaflet”;
 import TileLayerHeaders from “leaflet-custom-headers”;
 
-const map = L.map(“map”).setView([51.505, -0.09], 13);
+const map = new Map(“map”).setView([51.505, -0.09], 13);
 
 const layerWithHeaders = new TileLayerHeaders(“https://example.com/tiles/{z}/{x}/{y}.png”, {
   customHeaders: {
